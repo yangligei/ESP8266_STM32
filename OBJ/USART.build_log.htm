@@ -1,0 +1,105 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.21.1.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 杨济远济杨, 123, LIC=D0D7S-L703V-GKSBG-V40VK-QH6E3-XM8ML
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.21a
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 3 (build 300)
+Assembler:       Armasm.exe V5.06 update 3 (build 300)
+Linker/Locator:  ArmLink.exe V5.06 update 3 (build 300)
+Library Manager: ArmAr.exe V5.06 update 3 (build 300)
+Hex Converter:   FromElf.exe V5.06 update 3 (build 300)
+CPU DLL:         SARMCM3.DLL V5.21a
+Dialog DLL:      DARMSTM.DLL V1.66.0.1
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.7.0
+Dialog DLL:        TARMSTM.DLL   
+ 
+<h2>Project:</h2>
+C:\Users\杨济远济杨\Desktop\mini_TV\v0.6\USER\USART.uvprojx
+Project File Date:  01/03/2023
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 3 (build 300)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'Target 1'
+compiling ana.c...
+ana.c(78): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const u8 *"
+  						LCD_ShowString(130,30,(char *)str,
+REEN,
+LACK,16,0);
+ana.c(94): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const u8 *"
+  						LCD_ShowString(100,95,(char *)str,
+REEN,
+LACK,16,0);
+ana.c(126): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "const u8 *"
+  					     LCD_ShowString(10,240,(char *)str,
+REEN,
+LACK,16,0);
+ana.c(139): warning:  #223-D: function "esp8266_exit" declared implicitly
+  				if(!esp8266_exit())
+ana.c(143): warning:  #223-D: function "esp8266_TCP_Released" declared implicitly
+  					if(!esp8266_TCP_Released())
+ana.c(397): warning:  #223-D: function "esp8266_exit" declared implicitly
+  			if(!esp8266_exit())
+ana.c(401): warning:  #223-D: function "esp8266_TCP_Released" declared implicitly
+  				if(!esp8266_TCP_Released())
+ana.c(382): warning:  #177-D: variable "lo" was declared but never referenced
+  			char lo;
+ana.c(417): warning:  #1-D: last line of file ends without a newline
+  }
+ana.c: 9 warnings, 0 errors
+compiling esp8266.c...
+esp8266.c(123): warning:  #192-D: unrecognized character escape sequence
+    res = esp8266_SendCmd("AT+CWJAP=\"0202\"\,\"123456yjy\"\r\n","OK",2000);
+esp8266.c(191): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+     USART1_Send_String(get_api); //发????
+esp8266.c(218): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+  	USART1_Send_String(exit); //发????
+esp8266.c(248): warning:  #167-D: argument of type "char *" is incompatible with parameter of type "u8 *"
+     USART1_Send_String(get_api); //发????
+esp8266.c(299): warning:  #940-D: missing return statement at end of non-void function "get_ip_location"
+  }
+esp8266.c: 5 warnings, 0 errors
+compiling main.c...
+main.c(66): warning:  #223-D: function "get_ip_location" declared implicitly
+        get_ip_location(); // wifi??始化并??取当前IP??应?牡???位??
+main.c(32): warning:  #177-D: variable "i" was declared but never referenced
+  	 u8 i,j;
+main.c(32): warning:  #177-D: variable "j" was declared but never referenced
+  	 u8 i,j;
+main.c(33): warning:  #177-D: variable "t" was declared but never referenced
+  	float t=0;
+main.c: 4 warnings, 0 errors
+linking...
+Program Size: Code=26200 RO-data=17548 RW-data=96 ZI-data=17664  
+FromELF: creating hex file...
+"..\OBJ\USART.axf" - 0 Error(s), 18 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.Jansson.1.0.0.pack
+                Keil::Data Exchange:JSON:Jansson:2.7.0
+                Jansson is a C library for encoding, decoding and manipulating JSON data
+   * Component: Jansson Version: 2.7.0
+
+<h2>Collection of Component include folders:</h2>
+  C:\Users\杨济远济杨\Desktop\mini_TV\v0.6\USER\RTE
+  C:\Keil_v5\ARM\PACK\Keil\Jansson\1.0.0\src
+  C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: Keil::Data Exchange:JSON:Jansson:2.7.0
+      Source file:   src\jansson_config.c
+      Library file:  lib\jansson_CM3LE.lib
+      Include file:  src\jansson.h
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>
